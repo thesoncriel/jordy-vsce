@@ -2,7 +2,7 @@
   "name": "ts-fe-vscode-extension",
   "displayName": "ts-fe-vscode-extension",
   "description": "vscode extension for ts-fe-cli",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "publisher": "theson",
   "engines": {
     "vscode": "^1.60.x"
