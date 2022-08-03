@@ -13,8 +13,7 @@ interface VscodeExplorerContextDto {
 function executeFeatureModule(feature: string, sub: string) {
 	const terminal = vscode.window.createTerminal(`ts-fe-cli-temp-${Date.now()}`);
 
-	// terminal.show();
-	terminal.sendText(`npx ts-fe-cli feat add ${feature}/${sub}`);
+	terminal.sendText(`npm run cli feat add ${feature}/${sub}`);
 	terminal.sendText('y');
 
 	setTimeout(() => {
