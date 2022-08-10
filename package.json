@@ -2,7 +2,7 @@
   "name": "ts-fe-vscode-extension",
   "displayName": "ts-fe-vscode-extension",
   "description": "vscode extension for ts-fe-cli",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "publisher": "theson",
   "engines": {
     "vscode": "^1.60.x"
@@ -11,16 +11,34 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:ts-fe-vscode-extension.feat-add"
+    "onCommand:ts-fe-vscode-extension.feat-add",
+    "onCommand:ts-fe-vscode-extension.sub-add",
+    "onCommand:ts-fe-vscode-extension.ui-add",
+    "onCommand:ts-fe-vscode-extension.sb-add"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "menus": {
       "explorer/context": [
         {
-          "when": "explorerResourceIsFolder || resourceLangId == typescript || resourceLangId == typescriptreact",
+          "when": "explorerResourceIsFolder && resourcePath =~ /features/",
           "group": "z_commands",
           "command": "ts-fe-vscode-extension.feat-add"
+        },
+        {
+          "when": "explorerResourceIsFolder && resourcePath =~ /features\/\\w+|shared/",
+          "group": "z_commands",
+          "command": "ts-fe-vscode-extension.sub-add"
+        },
+        {
+          "when": "explorerResourceIsFolder && resourcePath =~ /(features|shared|common)\/\\w+\/components/\\w+/",
+          "group": "z_commands",
+          "command": "ts-fe-vscode-extension.ui-add"
+        },
+        {
+          "when": "resourceExtname == .tsx && resourcePath =~ /(features|shared|common)\/\\w+\/components/",
+          "group": "z_commands",
+          "command": "ts-fe-vscode-extension.sb-add"
         }
       ]
     },
@@ -28,6 +46,18 @@
       {
         "command": "ts-fe-vscode-extension.feat-add",
         "title": "Add Feature Module"
+      },
+      {
+        "command": "ts-fe-vscode-extension.sub-add",
+        "title": "Add Sub Module"
+      },
+      {
+        "command": "ts-fe-vscode-extension.ui-add",
+        "title": "Add UI Component with Storybook"
+      },
+      {
+        "command": "ts-fe-vscode-extension.sb-add",
+        "title": "Add Storybook for This Component"
       }
     ]
   },
