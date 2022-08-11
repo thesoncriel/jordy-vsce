@@ -2,7 +2,7 @@
   "name": "ts-fe-vscode-extension",
   "displayName": "ts-fe-vscode-extension",
   "description": "vscode extension for ts-fe-cli",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "publisher": "theson",
   "engines": {
     "vscode": "^1.60.x"
@@ -31,12 +31,12 @@
           "command": "ts-fe-vscode-extension.sub-add"
         },
         {
-          "when": "explorerResourceIsFolder && resourcePath =~ /(features|shared|common)\/\\w+\/components/\\w+/",
+          "when": "explorerResourceIsFolder && resourcePath =~ /(features\/\\w+|shared|common)\/components/\\w+/",
           "group": "z_commands",
           "command": "ts-fe-vscode-extension.ui-add"
         },
         {
-          "when": "resourceExtname == .tsx && resourcePath =~ /(features|shared|common)\/\\w+\/components/",
+          "when": "resourceExtname == .tsx && resourcePath =~ /(features\/\\w+|shared|common)\/components/",
           "group": "z_commands",
           "command": "ts-fe-vscode-extension.sb-add"
         }

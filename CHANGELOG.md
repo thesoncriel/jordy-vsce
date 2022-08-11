@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.3.1] - 2022-08-11
+### Fixed
+
+- common 과 shared 모듈에서 UI 컴포넌트 생성 컨텍스트 메뉴가 뜨지 않던 부분을 수정합니다.
+
+## [0.3.0] - 2022-08-10
+### Changed
+
+- `Add Sub Module` 기능이 추가되었습니다.
+- `Add UI Component with Storybook` 기능이 추가되었습니다.
+- `Add Storybook for This Component` 기능이 추가되었습니다.
+- 좌측 탐색기 내 우클릭된 파일과 폴더별로 다른 컨텍스트 메뉴가 나오도록 표현 조건을 보완하였습니다.
+
 ## [0.2.4] - 2022-08-03
 ### Changed
 
