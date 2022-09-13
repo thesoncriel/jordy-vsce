@@ -11,7 +11,7 @@ interface VscodeExplorerContextDto {
 }
 
 function executeFeatureModule(feature: string, sub: string) {
-	const terminal = vscode.window.createTerminal(`ts-fe-cli-temp-${Date.now()}`);
+	const terminal = vscode.window.createTerminal(`jordy-cli-temp-${Date.now()}`);
 
 	terminal.sendText(`npm run cli feat ${feature} ${sub}`);
 	terminal.sendText('y');
@@ -22,7 +22,7 @@ function executeFeatureModule(feature: string, sub: string) {
 }
 
 function executeSubModule(path: string, sub: string) {
-	const terminal = vscode.window.createTerminal(`ts-fe-cli-temp-${Date.now()}`);
+	const terminal = vscode.window.createTerminal(`jordy-cli-temp-${Date.now()}`);
 
 	terminal.sendText(`npm run cli sub ${path} ${sub}`);
 	terminal.sendText('y');
@@ -33,7 +33,7 @@ function executeSubModule(path: string, sub: string) {
 }
 
 function executeUiComponent(path: string, componentName: string, type: string) {
-	const terminal = vscode.window.createTerminal(`ts-fe-cli-temp-${Date.now()}`);
+	const terminal = vscode.window.createTerminal(`jordy-cli-temp-${Date.now()}`);
 
 	terminal.sendText(`npm run cli ui ${path} ${componentName} ${type}`);
 	terminal.sendText('y');
@@ -44,7 +44,7 @@ function executeUiComponent(path: string, componentName: string, type: string) {
 }
 
 function executeStorybook(path: string, type: string) {
-	const terminal = vscode.window.createTerminal(`ts-fe-cli-temp-${Date.now()}`);
+	const terminal = vscode.window.createTerminal(`jordy-cli-temp-${Date.now()}`);
 
 	terminal.sendText(`npm run cli sb ${path} ${type}`);
 	terminal.sendText('y');
@@ -60,12 +60,12 @@ export function activate(context: vscode.ExtensionContext) {
 	
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "ts-fe-vscode-extension" is now active!');
+	console.log('Congratulations, your extension "jordy-vsce" is now active!');
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposableFeatAdd = vscode.commands.registerCommand('ts-fe-vscode-extension.feat-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
+	let disposableFeatAdd = vscode.commands.registerCommand('jordy-vsce.feat-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
 		// vscode.window.showInformationMessage(JSON.stringify(arg0) + '\n------\n' + JSON.stringify(arg1));
@@ -102,7 +102,7 @@ export function activate(context: vscode.ExtensionContext) {
 		input1.show();
 	});
 
-	let disposableSubAdd = vscode.commands.registerCommand('ts-fe-vscode-extension.sub-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
+	let disposableSubAdd = vscode.commands.registerCommand('jordy-vsce.sub-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
 		const input = vscode.window.createInputBox();
 
 		input.title = 'sub name ?';
@@ -121,7 +121,7 @@ export function activate(context: vscode.ExtensionContext) {
 		input.show();
 	});
 
-	let disposableUiAdd = vscode.commands.registerCommand('ts-fe-vscode-extension.ui-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
+	let disposableUiAdd = vscode.commands.registerCommand('jordy-vsce.ui-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
 
 		const input = vscode.window.createInputBox();
 
@@ -153,7 +153,7 @@ export function activate(context: vscode.ExtensionContext) {
 		input.show();
 	});
 
-	let disposableStorybookAdd = vscode.commands.registerCommand('ts-fe-vscode-extension.sb-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
+	let disposableStorybookAdd = vscode.commands.registerCommand('jordy-vsce.sb-add', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
 		const pick = vscode.window.createQuickPick();
 
 		pick.title = 'component type ?';
