@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.4.0] - 2022-09-28
+### Changed
+
+- 아래 기능에 대하여 components 에 하위경로가 없어도 사용 가능하도록 변경하였습니다.
+  - `Add UI Component with Storybook`
+  - `Add Storybook for This Component`
+
 ## [0.3.1] - 2022-08-11
 ### Fixed
 
