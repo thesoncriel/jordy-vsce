@@ -6,7 +6,7 @@
 
 ## Pre Dependency
 
-본 확장 프로그램 사용 전, 반드시 아래와 같이 [jordy-cli](https://github.com/thesoncriel/jordy-cli)를 먼저 설치하시기 바랍니다~ 🙌
+본 확장 프로그램 사용 전, 반드시 아래와 같이 [jordy-cli](https://github.com/thesoncriel/jordy-cli) 최신 버전을 먼저 설치하시기 바랍니다~ 🙌
 
 ```sh
 $ npm i -D jordy-cli@latest

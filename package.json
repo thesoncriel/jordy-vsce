@@ -2,7 +2,7 @@
   "name": "jordy-vsce",
   "displayName": "jordy-vsce",
   "description": "vscode extension for jordy-cli",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "publisher": "theson",
   "repository": {
     "type": "git",
@@ -35,12 +35,12 @@
           "command": "jordy-vsce.sub-add"
         },
         {
-          "when": "explorerResourceIsFolder && resourcePath =~ /(features\/\\w+|shared|common)\/components/",
+          "when": "explorerResourceIsFolder && resourcePath =~ /(features\/\\w+|shared|common|ui)\/components/",
           "group": "z_commands",
           "command": "jordy-vsce.ui-add"
         },
         {
-          "when": "resourceExtname == .tsx && resourcePath =~ /(features\/\\w+|shared|common)\/components/",
+          "when": "resourceExtname == .tsx && resourcePath =~ /(features\/\\w+|shared|common|ui)\/components/",
           "group": "z_commands",
           "command": "jordy-vsce.sb-add"
         }
