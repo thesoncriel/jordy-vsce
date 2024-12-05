@@ -1,5 +1,23 @@
 # Change Log
 
+## [0.6.0] - 2024-12-05
+### Changed
+
+- 모든 React 관련 템플릿과 스니펫들에 대하여 tailwindcss 기반으로 작업할 수 있도록 변경합니다.
+  - 즉 styled 관련 키워드는 없어지고 cn(clsx)로 대체되었습니다.
+- 스니펫
+  - Imperative Container 가 추가되었습니다.
+  - 사용: `!rccimp`
+- 템플릿
+  - 만들어지는 스토리북 코드 내 불필요한 코드를 제거하였습니다.
+  - 모든 imperative 컴포넌트의 스토리북에 actions 를 기본적으로 추가 해 두었습니다.
+  - 기존 dialog -> dialogWithResolver 로 변경합니다.
+  - 신설: dialog
+    - 간단히 open 기능을 제공하는 다이얼로그 코드 입니다.
+  - 신설: antdTable
+    - [ant.design](https://ant.design/components/table) 의 Table 컴포넌트를 Wrapping 하여 사용되는 컴포넌트 입니다.
+    - 여기서 필수적으로 사용되는 columns hook 도 자동으로 생성합니다.
+
 ## [0.5.0] - 2022-11-28
 ### Changed
 

@@ -142,7 +142,7 @@ export function activate(context: vscode.ExtensionContext) {
 			input.hide();	
 			pick.show();
 			vscode.window.showQuickPick([
-				'normal', 'memo', 'dialog', 'imperative'
+				'normal', 'memo', 'dialog', 'dialogWithResolver', 'imperative', 'antdTable'
 			])
 			.then(pickValue => {
 				pickValue && executeUiComponent(arg0.path, input.value.trim(), pickValue);
