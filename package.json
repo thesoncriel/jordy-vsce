@@ -2,14 +2,14 @@
   "name": "jordy-vsce",
   "displayName": "jordy-vsce",
   "description": "vscode extension for jordy-cli",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "publisher": "theson",
   "repository": {
     "type": "git",
     "url": "https://github.com/thesoncriel/jordy-vsce"
   },
   "engines": {
-    "vscode": "^1.95.x"
+    "vscode": "^1.93.x"
   },
   "categories": [
     "Other"
