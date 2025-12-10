@@ -2,7 +2,7 @@
   "name": "jordy-vsce",
   "displayName": "jordy-vsce",
   "description": "vscode extension for jordy-cli",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "publisher": "theson",
   "repository": {
     "type": "git",
@@ -38,6 +38,11 @@
           "when": "resourceExtname == .tsx && resourcePath =~ /(features\/\\w+|shared|common|ui)\/components/",
           "group": "z_commands",
           "command": "jordy-vsce.sb-add"
+        },
+        {
+          "when": "resourceExtname == .test.ts && resourcePath =~ /(features\/\\w+|shared|common|ui)/",
+          "group": "z_commands",
+          "command": "jordy-vsce.vitest-watch"
         }
       ]
     },
@@ -57,6 +62,10 @@
       {
         "command": "jordy-vsce.sb-add",
         "title": "Add Storybook for This Component"
+      },
+      {
+        "command": "jordy-vsce.vitest-watch",
+        "title": "Run vitest with watch"
       }
     ]
   },

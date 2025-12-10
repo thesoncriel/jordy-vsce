@@ -54,6 +54,14 @@ function executeStorybook(path: string, type: string) {
 	}, 5000);
 }
 
+function executeVitestWithWatch(path: string) {
+	const fileName = path.split('/').pop();
+	const terminal = vscode.window.createTerminal(`vitest-${fileName}`);
+
+	terminal.sendText(`npx vitest --watch ${path}`);
+	terminal.sendText('y');
+}
+
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -168,7 +176,11 @@ export function activate(context: vscode.ExtensionContext) {
 			});
 	});
 
-	context.subscriptions.push(disposableFeatAdd, disposableSubAdd, disposableUiAdd, disposableStorybookAdd);
+	let disposableVitestWatch = vscode.commands.registerCommand('jordy-vsce.vitest-watch', (arg0: VscodeExplorerContextDto, arg1: VscodeExplorerContextDto[]) => {
+		executeVitestWithWatch(arg0.path);
+	});
+
+	context.subscriptions.push(disposableFeatAdd, disposableSubAdd, disposableUiAdd, disposableStorybookAdd, disposableVitestWatch);
 }
 
 // this method is called when your extension is deactivated
